@@ -1,0 +1,182 @@
+Exercicios - 2602
+
+Ex 01: 
+
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Digite a altura do retângulo:");
+        double altura = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("Digite a largura do retângulo:");
+        double largura = Convert.ToDouble(Console.ReadLine());
+
+        double area = CalcularAreaRetangulo(altura, largura);
+
+        Console.WriteLine($"A área do retângulo é: {area}");
+    }
+
+    static double CalcularAreaRetangulo(double altura, double largura)
+    {
+        return altura * largura;
+    }
+}
+
+
+Ex 02:
+
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Digite o valor em reais:");
+        double valorEmReais = Convert.ToDouble(Console.ReadLine());
+
+        double valorEmDolar = valorEmReais / 5.17;
+        double valorEmEuro = valorEmReais / 6.14;
+        double valorEmPesoArgentino = valorEmReais / 0.05;
+
+        Console.WriteLine($"Valor em dólar: {valorEmDolar}");
+        Console.WriteLine($"Valor em euro: {valorEmEuro}");
+        Console.WriteLine($"Valor em peso argentino: {valorEmPesoArgentino}");
+    }
+}
+
+
+Ex 03:
+
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Digite o primeiro número:");
+        int num1 = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Digite o segundo número:");
+        int num2 = Convert.ToInt32(Console.ReadLine());
+
+        if (num1 == num2)
+        {
+            Console.WriteLine("Os números são iguais.");
+        }
+        else if (num1 < num2)
+        {
+            Console.WriteLine($"O menor número é: {num1}");
+            Console.WriteLine($"O maior número é: {num2}");
+        }
+        else
+        {
+            Console.WriteLine($"O menor número é: {num2}");
+            Console.WriteLine($"O maior número é: {num1}");
+        }
+    }
+}
+
+Ex 04:
+
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Digite sua idade:");
+        int idade = Convert.ToInt32(Console.ReadLine());
+
+        if (idade <= 13)
+        {
+            Console.WriteLine("Criança");
+        }
+        else if (idade <= 18)
+        {
+            Console.WriteLine("Adolescente");
+        }
+        else if (idade <= 60)
+        {
+            Console.WriteLine("Adulto");
+        }
+        else
+        {
+            Console.WriteLine("Idoso");
+        }
+    }
+}
+
+
+Ex 05:
+
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Digite um número para a sequência Fibonacci:");
+        int limite = Convert.ToInt32(Console.ReadLine());
+
+        int a = 0, b = 1;
+
+        while (a <= limite)
+        {
+            Console.Write(a + " ");
+
+            int temp = a;
+            a = b;
+            b = temp + b;
+        }
+    }
+}
+
+
+Ex 06:
+
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int[] vetor = new int[1000];
+        Random rnd = new Random();
+
+        Console.WriteLine("Vetor original:");
+        for (int i = 0; i < vetor.Length; i++)
+        {
+            vetor[i] = rnd.Next(1000);
+            Console.Write(vetor[i] + " ");
+        }
+
+        BubbleSort(vetor);
+
+        Console.WriteLine("\n\nVetor ordenado:");
+        foreach (int num in vetor)
+        {
+            Console.Write(num + " ");
+        }
+    }
+
+    static void BubbleSort(int[] vetor)
+    {
+        int n = vetor.Length;
+        for (int i = 0; i < n - 1; i++)
+        {
+            for (int j = 0; j < n - i - 1; j++)
+            {
+                if (vetor[j] > vetor[j + 1])
+                {
+                    int temp = vetor[j];
+                    vetor[j] = vetor[j + 1];
+                    vetor[j + 1] = temp;
+                }
+            }
+        }
+    }
+}
+
