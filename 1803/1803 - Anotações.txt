@@ -1,0 +1,14 @@
+1803 - Topicos Especiais
+
+Anotações:
+
+- Lembrete de configurações do github;
+
+- Explicação de sepração de back e front-end para desenvolvimento
+  ao longo do semestre;
+
+-  Criação de um novo projeto API com Solução;
+
+- Criação de exemplo de requisição via watch;
+
+- Criação de arquivo para testes dentro da API ".http";
