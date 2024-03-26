@@ -1,0 +1,8 @@
+### Cadastro de produtos
+POST http://localhost:5076/api/produto/cadastrar
+
+### Listagem de produtos
+GET http://localhost:5076/api/produto/listar
+
+### Busca de produtos
+GET http://localhost:5076/api/produto/buscar/Cafeteira
