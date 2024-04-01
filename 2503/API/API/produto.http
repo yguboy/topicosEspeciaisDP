@@ -1,5 +1,5 @@
 ### Cadastro de produtos
-POST http://localhost:5076/api/produto/cadastrar
+POST http://localhost:5076/api/produto/cadastrar/TV/LG
 
 ### Listagem de produtos
 GET http://localhost:5076/api/produto/listar
