@@ -1,8 +1,35 @@
 ### Cadastro de produtos
-POST http://localhost:5076/api/produto/cadastrar/TV/LG
+POST http://localhost:5076/api/produto/cadastrar
+Content-Type: application/json
+
+{
+    "nome" : "TV",
+    "descricao" : "50 polegadas",
+    "preco" : 6900.00 
+}
 
 ### Listagem de produtos
 GET http://localhost:5076/api/produto/listar
 
 ### Busca de produtos
-GET http://localhost:5076/api/produto/buscar/Cafeteira
+GET http://localhost:5076/api/produto/buscar/TV
+
+### Alterar um produto
+PATCH http://localhost:5076/api/produto/alterar/5cb747a6-2e0a-4ac5-9f87-e009ee521b64
+Content-Type: application/json
+
+{
+    "Nome": "Novo Nome",
+    "Descricao": "Nova Descrição",
+    "Preco": 10.99
+}
+
+### Remover um produto
+DELETE http://localhost:5076/api/produto/remover
+Content-Type: application/json
+
+{
+    "nome" : "TV",
+    "descricao" : "50 polegadas",
+    "preco" : 6900.00 
+}
