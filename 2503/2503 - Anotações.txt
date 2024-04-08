@@ -1,0 +1,14 @@
+2503 - Topicos Especiais
+
+- Revisão das ultimas inclusões no projeto backend;
+
+- Toda nova função/aplicação que for criada precisa de um endpoint;
+
+- Postman, Insomnia e REST Client (extensão do VSCode), 
+  os 3 para teste de extensões .http;
+
+- Explicação de using e namespaces;
+
+- Criação de classes publicas e seus getters e setters;
+
+- 

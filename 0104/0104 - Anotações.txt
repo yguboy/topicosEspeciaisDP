@@ -1,0 +1,12 @@
+0104 - Topicos Especiais
+
+Anotações:
+
+- Revisão de ultimas adições na API da ultima aula;
+
+- Criação de novas função da classe Produto;
+	1. Cadastrar um produto na lista;
+	A. Através das informações na URL;
+	B. Através das informações no corpo da requisição;
+  
+- 
