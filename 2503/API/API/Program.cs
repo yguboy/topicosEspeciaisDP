@@ -70,3 +70,7 @@ app.MapDelete("/api/produto/remover", ([FromBody] Produto produtoParaRemover) =>
 });
 
 app.Run();
+
+//Exercicios para 0 EF
+//1. Cadastrar o objeto de produto no banco
+//2. Listar os registros da tabela
