@@ -1,0 +1,38 @@
+08/04 - Topicos Especiais
+
+Anotações:
+
+- Resumo de alterações no CRUD feito na ultima aula;
+
+- Valores não necessitam de "";
+
+- Explicação de introdução de CRUDs a um banco de dados;
+
+- Todo front precisa de uma biblioteca para se conectar ao back 
+  e vise e versa (ORM);
+
+- Entity Framework (biblioteca que sera utilizada);
+
+- Banco de dados permanesera no SQLite;
+
+- Quais bibliotecas serão instaladas no projeto?
+
+- O que é necessario adicionar/alterar bo projeto para configurar
+  a aplicação com o banco de dados?
+  
+- Utilização do chatgpt para explicação melhor introdução
+  de entity framework em nosso CRUD;
+  
+- Dowload de bibliotecas do entity para configurar, links
+  no notion (SQLite e Design);
+  
+- Criação de banco de dados no projeto atraves de linha de codigos
+  (Codigos no notion);
+
+- dotnet ef migrations add "nome"
+
+- dotnet ef database update
+
+- downet tool install --global dotnet-ef
+
+- 
