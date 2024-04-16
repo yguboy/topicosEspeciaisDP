@@ -1,0 +1,24 @@
+1504 - Topicos Especiais
+
+Anotações:
+
+- Explicação da parte 1 do trabalho (no notion);
+
+- dotnet restore - aplica as bibliotecas de uma palicação para 
+  outro computador;
+  
+- Explicação de migrações no projeto;
+
+- Não se esqueça, toda modificação em uma tabela, seja adição 
+  ou remoção, delete o banco de dados atual e suas migrações,
+  e ai criei e de atualize-o com os comandos de ef;
+  
+- Explicação de como adicionar coisas em tabelas no banco;
+
+- Essas linhas são as necessarias para que a tabela de cadastro 
+  adicionar informações na tabela do db;
+
+- builder.Services.AddDbContext<AppDataContext>();
+- [FromServices] AppDataContext context;
+- context.Produtos.Add(produto);
+- context.SaveChanges();

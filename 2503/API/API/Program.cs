@@ -2,41 +2,48 @@ using API.Models;
 using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
+
+//Registrar o serviço de banco de dados na aplicação
+builder.Services.AddDbContext<AppDataContext>();
+
 var app = builder.Build();
 
 List<Produto> produtos = new List<Produto>();
 
 //End Points = Funcionalidades - JSON
 
-//Cadastrar um produto na lista
-//A. Através das informações na URL
-//B. Através das informações no corpo da requisição
-//C. Realizar as operações de alteração e remoção da lista
-
 //POST: http://localhost:5076/api/produto/cadastrar
-app.MapPost("/api/produto/cadastrar/", ([FromBody] Produto produto) =>
+app.MapPost("/api/produto/cadastrar/", ([FromBody] Produto produto, [FromServices] AppDataContext context) =>
 {
-    //Adicionando o produto dentro da lista
+    //Adicionando o produto dentro da tabela no banco de dados
+    context.Produtos.Add(produto);
+    context.SaveChanges();
     produtos.Add(produto);
-
     return Results.Created("", produto);
 });
 
 //GET: http://localhost:5076/api/produto/listar
-app.MapGet("/api/produto/listar", () => produtos);
-
-//GET: http://localhost:5076/api/produto/buscar/{nomedoproduto}
-app.MapGet("/api/produto/buscar/{nome}", ([FromRoute] string nome) =>
+app.MapGet("/api/produto/listar", ([FromServices] AppDataContext context) =>
 {
-    //EndPoint com várias linhas de código 
-    for (int i = 0; i < produtos.Count; i++)
+    if (context.Produtos.Any())
     {
-        if (produtos[i].Nome == nome)
-        {
-            return Results.Ok(produtos[i]);
-        }
+        return Results.Ok(context.Produtos.ToList());
     }
     return Results.NotFound("Produto não encontrado!");
+});
+
+//GET: http://localhost:5076/api/produto/buscar/{iddoproduto}
+app.MapGet("/api/produto/buscar/{id}", ([FromRoute] string id, [FromServices] AppDataContext context) =>
+{
+    //EndPoint com várias linhas de código 
+    //x é apenas um apelido qualquer
+    Produto? produto = context.Produtos.FirstOrDefault(x => x.Id == id);
+
+    if (produto is null)
+    {
+        return Results.NotFound("Produto não encontrado!");
+    }
+    return Results.Ok(produtos);
 });
 
 // PATCH: http://localhost:5076/api/produto/alterar/{id}

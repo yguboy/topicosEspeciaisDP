@@ -12,7 +12,7 @@ Content-Type: application/json
 GET http://localhost:5076/api/produto/listar
 
 ### Busca de produtos
-GET http://localhost:5076/api/produto/buscar/TV
+GET http://localhost:5076/api/produto/buscar/55503322-f038-4392-b511-24304644adb7
 
 ### Alterar um produto
 PATCH http://localhost:5076/api/produto/alterar/5cb747a6-2e0a-4ac5-9f87-e009ee521b64

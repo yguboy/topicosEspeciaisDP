@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Migrations
 {
     [DbContext(typeof(AppDataContext))]
-    [Migration("20240409004023_AddQuantidadeTabelaProduto")]
-    partial class AddQuantidadeTabelaProduto
+    [Migration("20240415224935_CreateDatabaseAgain")]
+    partial class CreateDatabaseAgain
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

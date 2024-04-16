@@ -34,5 +34,3 @@ Anotações:
 - dotnet ef database update
 
 - downet tool install --global dotnet-ef
-
-- 
