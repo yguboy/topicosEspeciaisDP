@@ -1,0 +1,12 @@
+2204 - Topicos Especias
+
+Anotações:
+
+- Revisão da ultima aula;
+
+- Criação de alteração e remoção de coluna na tabela do banco;
+
+- Introdução a validações;
+
+-  Feitas em cadastros e nas colunas da tabela Produto;
+
