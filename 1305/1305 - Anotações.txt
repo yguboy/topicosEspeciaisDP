@@ -1,0 +1,9 @@
+1305 - Topicos Especiais		
+
+Anotações: 
+
+- Explicação da prova;
+
+- Criacão de projeto front (comando no CLI);
+
+- 
