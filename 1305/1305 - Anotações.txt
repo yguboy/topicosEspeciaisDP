@@ -6,4 +6,16 @@ Anotações:
 
 - Criacão de projeto front (comando no CLI);
 
+- Apague arquivos inuteis do projeto;
+
+- Criaçaão de novos componentes para testes;
+
+- Um componente sempre deve começar com a primeira letra Maiúscula;
+
+- Todo componente deve ser uma função do JS;
+
+- Todo componente deve retornar apenas um elemento HTML
+
+- Obrigatoriamente o componente deve ser exportado;
+
 - 
