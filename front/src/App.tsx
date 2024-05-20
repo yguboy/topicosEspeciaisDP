@@ -5,10 +5,10 @@ import Soma from './Soma';
 
 //2 - Todo componente deve ser uma função do JS
 
-//3 - Todo componente deve retornar apenas um elemento HTML
+//3 - Todo componente deve retornar apenas um elemento pai HTML
 function App() {
   return (
-    <div>
+    <div id="app">
       <Soma></Soma>
     </div>
   );

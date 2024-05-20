@@ -1,0 +1,15 @@
+20/05 - Topicos Especiais
+
+Anotações:
+
+- Revisão de ultima aula (criação de front e começo de
+  desenvolvimento de Soma);
+ 
+- Se voce clonar o projeto com o react instalado, as dependencias
+  não iram junto, por isso após clonar um projeto, deve-se usar
+  "npm i" para instala-las no novo projeto clonado;
+  
+- Antes da criação de um evento, deve-se criar uma função
+  para que ela seja utilizada;
+  
+- 
