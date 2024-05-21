@@ -12,4 +12,7 @@ Anotações:
 - Antes da criação de um evento, deve-se criar uma função
   para que ela seja utilizada;
   
+- Criação de novo projeto front que sera utilizado nas
+  proximas aulas;
+  
 - 
