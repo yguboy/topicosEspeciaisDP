@@ -1,0 +1,28 @@
+2705 - Topicos Especiais
+
+Anotações:
+
+- Criação de novo componente no front (cep);
+
+- Criação de pasta models e declaração de classes para mostrar
+  no front;
+  
+- Criação de API para pegar cep de local (maiores detalhes no commit
+  do github);
+  
+- Adição de builder para liberar credenciais serem recebidas
+  no back-end: 
+	  builder.Services.AddCors(
+		options =>
+		{
+			options.AddPolicy("AcessoTotal",
+				builder => builder.
+					AllowAnyOrigin().
+					AllowAnyHeader().
+					AllowAnyMethod());
+		}
+	);
+
+	app.UseCors("AcessoTotal");
+
+- 

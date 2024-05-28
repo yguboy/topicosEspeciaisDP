@@ -3,7 +3,7 @@ POST http://localhost:5076/api/produto/cadastrar
 Content-Type: application/json
 
 {
-    "nome" : "Celular",
+    "nome" : "Celular2",
     "descricao" : "Android",
     "preco" : 900
 }
@@ -12,7 +12,7 @@ Content-Type: application/json
 GET http://localhost:5076/api/produto/listar
 
 ### Busca de produtos
-GET http://localhost:5076/api/produto/buscar/1ce6d707-e947-41c9-a8f3-2e77a0702aef
+GET http://localhost:5076/api/produto/buscar/cc7e506f-bc65-4ba4-8d70-21e9aa820422
 
 ### Alterar um produto
 PUT http://localhost:5076/api/produto/alterar/1ce6d707-e947-41c9-a8f3-2e77a0702aef
