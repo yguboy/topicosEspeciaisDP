@@ -1,0 +1,12 @@
+Topicos Especiais - 1006
+
+Anotações: 
+
+- Finalização de projeto em aula;
+
+- Semana que vem sem aula devido a TCCs e ETI Summit;
+
+- npm i axios @types/axios = instala a biblioteca axios para
+  não utilizar mais o fetch;
+  
+- 

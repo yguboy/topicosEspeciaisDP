@@ -1,0 +1,17 @@
+03/06 - Topicos Especiais
+
+Anotações: 
+
+- Aviso sobre lançamento de parte 2 do trabalho (pesquisar 
+  bibliotecas de estilos para aplicar no front);
+  
+- Criação de cadastro de produto e mostrando no front junto com
+  listagem;
+  
+- Adição de duas bibliotecas no front(npm install react-router-dom)
+									 (npm install @types/react-router-dom)
+									 
+- Recurso apenas instalados para mover a navegação entre funções
+  no front;
+
+- 

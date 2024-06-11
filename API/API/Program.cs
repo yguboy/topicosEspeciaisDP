@@ -59,18 +59,18 @@ app.MapGet("/api/produto/listar", ([FromServices] AppDataContext context) =>
     return Results.NotFound("Produto não encontrado!");
 });
 
-//GET: http://localhost:5076/api/produto/buscar/{iddoproduto}
-app.MapGet("/api/produto/buscar/{id}", ([FromRoute] string id, [FromServices] AppDataContext context) =>
+// GET: http://localhost:5076/api/produto/buscar/{iddoproduto}
+app.MapGet("/api/produto/buscar/{id}", ([FromRoute] string id,
+    [FromServices] AppDataContext context) =>
 {
-    //EndPoint com várias linhas de código 
-    //x é apenas um apelido qualquer
+    //Endpoint com várias linhas de código
     Produto? produto = context.Produtos.FirstOrDefault(x => x.Id == id);
 
     if (produto is null)
     {
         return Results.NotFound("Produto não encontrado!");
     }
-    return Results.Ok(produtos);
+    return Results.Ok(produto);
 });
 
 // PUT: http://localhost:5076/api/produto/alterar/{iddoproduto}
@@ -95,10 +95,9 @@ app.MapPut("/api/produto/alterar/{id}", ([FromRoute] string id, [FromBody] Produ
 });
 
 // DELETE: http://localhost:5076/api/produto/deletar/{iddoproduto}
-app.MapDelete("/api/produto/deletar{id}", ([FromRoute] string id,
-[FromServices] AppDataContext context) =>
+app.MapDelete("/api/produto/deletar/{id}", ([FromRoute] string id,
+    [FromServices] AppDataContext context) =>
 {
-    //Endpoint com varias linhas de código
     Produto? produto = context.Produtos.Find(id);
 
     if (produto is null)
@@ -107,7 +106,7 @@ app.MapDelete("/api/produto/deletar{id}", ([FromRoute] string id,
     }
     context.Produtos.Remove(produto);
     context.SaveChanges();
-    return Results.Ok(produtos);
+    return Results.Ok(context.Produtos.ToList());
 });
 
 //Utilizar o cors para ter acesso as credencias
@@ -115,6 +114,3 @@ app.UseCors("AcessoTotal");
 
 app.Run();
 
-//Exercicios para 0 EF
-//1. Cadastrar o objeto de produto no banco
-//2. Listar os registros da tabela
