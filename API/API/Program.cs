@@ -113,4 +113,3 @@ app.MapDelete("/api/produto/deletar/{id}", ([FromRoute] string id,
 app.UseCors("AcessoTotal");
 
 app.Run();
-

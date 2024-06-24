@@ -15,7 +15,7 @@ GET http://localhost:5076/api/produto/listar
 GET http://localhost:5076/api/produto/buscar/eac64b95-9086-416b-9bfd-b9e8792780b8
 
 ### Alterar um produto
-PUT http://localhost:5076/api/produto/alterar/eac64b95-9086-416b-9bfd-b9e8792780b8
+PUT http://localhost:5076/api/produto/alterar/90c197ff-1c61-4100-a539-b93b270fae27
 Content-Type: application/json
 
 {
